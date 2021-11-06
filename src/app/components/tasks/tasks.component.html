@@ -1,0 +1,4 @@
+<!-- the [task] means that the property component named task will equal taskItem -->
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<app-task-item *ngFor="let taskItem of tasks" [task]="taskItem" (onDeleteTask)="deleteTask(taskItem)"
+(onToggleReminder)="toggleReminder(taskItem)"></app-task-item>
